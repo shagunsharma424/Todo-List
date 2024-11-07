@@ -1,0 +1,140 @@
+
+.mainTodoDiv {
+    /* background-image: url("https://img.freepik.com/free-photo/aerial-view-city-fog_1153-5421.jpg?t=st=1729505128~exp=1729508728~hmac=4b7ed2d6b2cf8160fb834e5f45180018fef81fbb02922ecac24b6e7ea5452877&w=1380"); */
+    background-image: url("./day.jpg");
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    transition: all 1s;
+}
+
+.mainTodoDivNightImage {
+    /* background-image: url("https://img.freepik.com/free-photo/shiny-night-city_1127-8.jpg?t=st=1729250486~exp=1729254086~hmac=f9a521fad56dfbe01b63d88cc9370a15954c1b4fdaddcd1de33bdb85840efdc6&w=740"); */
+    /* filter: grayscale(100%); */
+    background-image: url("night.jpg");
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    transition: all 1s;
+}
+
+.todoPara {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+.icons {
+    color: white;
+    font-size: 35px;
+}
+
+.cursorpointer {
+    cursor: pointer;
+}
+
+.todoListInputAndTableDiv {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 80vh;
+
+}
+
+.todoListDiv ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.todoListDiv li
+{
+    display: flex;
+    border-bottom: 1px solid #8080802b;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.todoListDiv input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 7px solid rgba(87, 221, 255, 0.267);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent; /* Ensure transparent background by default */
+}
+
+.todoListDiv input[type="checkbox"]:checked {
+    /* background-image:linear-gradient(to bottom right, rgb(87 221 255), rgb(192 88 243)); */
+    background-size: 100%; /* Ensure gradient covers the entire checkbox */
+    border-color: var(--color-gradient-start,rgba(192 ,88 ,243,0.8)) 
+    
+
+}
+
+.todoListDiv span
+{
+    color: grey;
+    font-size: 19px;
+    font-weight: 400;
+    padding-left: 10px;
+    display: flex;
+    align-items: top;
+}
+
+.todoListInputAndTableDiv .input-group, .todoListDiv
+{
+    width: 50%;
+}
+  
+#basic-addon1
+{
+    border-radius: 0px 7px 7px 0px;
+}
+
+#basic-addon2
+{
+    border-radius: 0px 7px 7px 0px;
+    background-color: #000000ed;
+}
+.form-control
+{
+    border-radius: 7px 0px 0px 07px;
+    font-size: 22px;
+}
+
+.checkedSpan
+{
+    text-decoration: line-through;
+    /* color: red; */
+}
+
+.addIcon
+{
+    font-size: 26px;
+}
+
+.todoListDivDark ul,.InputDark
+{
+    background-color: #000000ed ;
+}
+.todoListDivDark span,.addIconDark
+{
+    color: white;
+}
