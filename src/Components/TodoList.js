@@ -14,9 +14,9 @@ export default function TodoList()
         { content: "Pick up groceries", checked: false },
         { content: "Complete Todo App on Frontend Mentor", checked: false }
       ];
-      const[todoList,setTodoList]=useState(data)
+    const[todoList,setTodoList]=useState(data)
 
-    const toggleDayFun=()=>{ setshowDay(!showDay)}
+    const toggleDayFun=()=>{setshowDay(!showDay)}
 
     const onChekboxChange=(eventData,eventId)=>{
         const Value=eventData?.target?.checked
@@ -45,17 +45,17 @@ export default function TodoList()
         toast("Note added successfully");
     }
 
-    console.log("todoList",todoList)
+    // console.log("todoList",todoList)
     return(
-       <div className={`${(showDay)?"mainTodoDiv":"mainTodoDivNightImage"}`} >
-            <div className="row justify-content-between">
-                <div className="col-2">
+       <main className={`${(showDay)?"mainTodoDiv":"mainTodoDivNightImage"}`} >
+            <header className="row justify-content-between">
+                <div className="col-xl-2 col-4">
                     <p className="todoPara m-2 mt-4">TODO</p>
                 </div>
-                <div className="col-1 m-2 mt-4 cursorpointer d-flex align-items-center">
+                <div className="col-xl-1 col-2 m-2 mt-4 cursorpointer d-flex align-items-center p-0">
                     {showDay?<i class="fa fa-sun-o icons " aria-hidden="true" onClick={toggleDayFun}></i>: <i class="fa fa-moon-o icons " aria-hidden="true" onClick={toggleDayFun}></i>}
                 </div>
-            </div>
+            </header>
             <div className="todoListInputAndTableDiv">
             <div class="input-group mb-3">
                 <input type="text" 
@@ -68,19 +68,16 @@ export default function TodoList()
                     <span class="input-group-text cursorpointer" id={`${(!showDay)?"basic-addon1":"basic-addon2"}`} onClick={onAddTodoList}><i className={`fa fa-plus addIcon ${(!showDay)?"":"addIconDark"}`} aria-hidden="true"></i></span>
                 </div>
             </div>
-
             <div className={`todoListDiv ${(!showDay)?"":"todoListDivDark"}`}>
-               
                 <ul>
                     <p className="d-inline-block"><span>Completed : {todoList.filter(data=>data.checked==true).length}</span></p>
                     <p className="d-inline-block"><span>Pending : {todoList.filter(data=>data.checked!=true).length}</span></p>
                     {todoList && todoList.map((data,index)=> <li><input type="checkbox"  checked={data.checked} onChange={(event)=>{onChekboxChange(event,index)}}/><span className={`${(data.checked)?"checkedSpan":""}`}>{data.content}</span> </li>)}
-                </ul>
-               
+                </ul>  
             </div>
 
             </div>
             <ToastContainer />
-       </div> 
+       </main> 
     )
 }

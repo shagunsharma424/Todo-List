@@ -96,6 +96,7 @@
     padding-left: 10px;
     display: flex;
     align-items: top;
+    text-align: start;
 }
 
 .todoListInputAndTableDiv .input-group, .todoListDiv
@@ -137,4 +138,42 @@
 .todoListDivDark span,.addIconDark
 {
     color: white;
+}
+
+
+@media screen and (max-width:998px)
+{
+    .todoPara {
+        font-size: 17px;;
+    }
+    .icons {
+        font-size: 17px;
+    }
+    .todoListDiv span
+    {
+        font-size: 12px;
+        padding-left: 7px;
+    }
+    .todoListDiv input[type="checkbox"]{
+        width: 16px;
+        height: 16px;
+    }
+    .todoListInputAndTableDiv .input-group, .todoListDiv{
+        width: 70%;
+        
+    }
+    .todoListDiv
+    {
+        height: 49vh;
+        overflow: auto;
+    }
+    .form-control {
+        font-size: 17px;
+    }
+    .addIcon {
+        font-size: 21px;
+    }
+    .todoListDiv input[type="checkbox"] {
+        border: 0.28rem solid rgba(87, 221, 255, 0.267);
+    }
 }
